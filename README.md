@@ -20,3 +20,15 @@ Our goal is to promote sustainability by reducing inefficiencies in waste collec
 - *Backend:* JAVA (Spring Boot)
 - *Database:* MYSQL
 - *Version Control:* Git & GitHub
+
+## 👥 *HackWizerds*
+
+We are a team of passionate innovators dedicated to building sustainable solutions.
+
+| *Name*         | *Role*              |
+|------------------|-----------------------|
+| [Teammate 1]     | Frontend Developer    |
+| [Teammate 2]     | Backend Developer     |
+| [Teammate 3]     | UI/UX Designer        |
+| [Teammate 4]     | Project Manager       |
+| [Teammate 5]     | Backend Developer     |
