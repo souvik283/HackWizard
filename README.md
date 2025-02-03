@@ -1,4 +1,4 @@
-# *HackWizerds - Waste Management System*
+# *HackWizards - Waste Management System*
 
 A smart waste management solution designed to bridge the gap between users and government authorities, making waste collection efficient, transparent, and eco-friendly. This project is part of our submission for the *Smart India Hackathon*.
 
@@ -21,7 +21,7 @@ Our goal is to promote sustainability by reducing inefficiencies in waste collec
 - *Database:* MYSQL
 - *Version Control:* Git & GitHub
 
-## 👥 *HackWizerds*
+## 👥 *HackWizards*
 
 We are a team of passionate innovators dedicated to building sustainable solutions.
 
