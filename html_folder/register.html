@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+</head>
+<body>
+    <h1>SMART INDIA <br>
+        CLEAN INDIA
+    </h1>
+    <p>+A</p>
+    <p>A</p>
+    <p>-A</p>
+    <img src="/india image.jpg" alt="india logo" height="30px">
+    <img src="/kack.jpg" alt="hackWizards" height="30px">
+    <hr>
+    
+    <h2>REGISTER</h2>
+    <form action="form.java">
+
+        <div>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+                .profile-preview {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                .profile-preview img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid #ccc;
+                }
+                .upload-btn {
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .upload-btn:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Upload Profile Image</h1>
+            <form action="/upload-profile-image" method="post" enctype="multipart/form-data">
+                <label for="profile-image">Choose a profile image:</label>
+                <input type="file" id="profile-image" name="profile-image" accept="image/*">
+                <br><br>
+                <button type="submit" class="upload-btn">Upload</button>
+            </form>
+        
+            <div class="profile-preview">
+                <h2>Profile Preview</h2>
+                <img id="preview" src="#" alt="Profile Preview" style="display:none;">
+            </div>
+        
+            <script>
+                // JavaScript to display the selected image as a preview
+                const profileImageInput = document.getElementById('profile-image');
+                const previewImage = document.getElementById('preview');
+        
+                profileImageInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            previewImage.src = e.target.result;
+                            previewImage.style.display = 'block';
+                        };
+                        reader.readAsDataURL(file);
+                    } else {
+                        previewImage.style.display = 'none';
+                    }
+                });
+            </script>
+        </div>
+
+        <div>
+        <label for="Name">enter your name</label>
+        <input type="text" id="name" name="name" maxlength="40" size="10" placeholder="enter name...">
+        </div>
+
+        <div>
+            <label for="number">enter your phone number</label>
+            <input type="number" id="number" name="number" minlength="10" maxlength="10" placeholder="enter number...">
+        </div>
+
+        <div>
+            <label for="email">enter your email</label>
+            <input type="email" id="email" pattern="" size="30" placeholder="enter email...">
+        </div>
+
+        <div>
+            <label for="address">enter your address</label>
+            <input type="text" id="address" name="address" size="20" placeholder="enter address...">
+        </div>
+
+        <div>
+            <label for="pincode">enter your pincode</label>
+            <input type="number" id="pincode" name="pincode" minlength="6" maxlength="6" size="6" placeholder="enter pincode...">
+        </div>
+    </form>
+</body>
+</html>
