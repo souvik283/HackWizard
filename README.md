@@ -1,4 +1,4 @@
-## [*HackWizards - Waste Management System*](https://hackwizard.netlify.app/)
+## [*HackWizards - Waste Management System*](https://hackwizards.netlify.app/)
 
 A smart waste management solution designed to bridge the gap between users and government authorities, making waste collection efficient, transparent, and eco-friendly. This project is part of our submission for the *Smart India Hackathon*.
 
