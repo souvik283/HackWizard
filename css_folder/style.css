@@ -3,7 +3,7 @@ body{
     padding:0; 
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    background: url("/HackWizards/images/waste-background1.jpeg") no-repeat center center fixed;
+    background: url("/images/waste-background1.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -176,4 +176,12 @@ body{
     margin-right: 50px;
     width:250px;
     cursor: pointer;
+}
+.social-icon a {
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon a:hover {
+    color: #007bff;
 }
