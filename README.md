@@ -27,9 +27,9 @@ We are a team of passionate innovators dedicated to building sustainable solutio
 
 | *Name*         | *Role*              |
 |------------------|-----------------------|
-| [Rajib]     | Frontend Developer    |
-| [Argha]     | Backend Developer     |
-| [Imran]     | UI/UX Designer        |
-| [Souvik]     | Project Manager       |
-| [Aritra]     | Backend Developer     |
-| [Asmita]     | Backend Developer     |
+| Rajib     | Team Lead   |
+| Argha     | Backend Developer     |
+| Imran     | Frontend Developer    |
+| Souvik     | Frontend Developer     |
+| Aritra     | Presenting Team     |
+| Asmita     | Presenting Team    |
