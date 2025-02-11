@@ -27,8 +27,9 @@ We are a team of passionate innovators dedicated to building sustainable solutio
 
 | *Name*         | *Role*              |
 |------------------|-----------------------|
-| [Teammate 1]     | Frontend Developer    |
-| [Teammate 2]     | Backend Developer     |
-| [Teammate 3]     | UI/UX Designer        |
-| [Teammate 4]     | Project Manager       |
-| [Teammate 5]     | Backend Developer     |
+| [Rajib]     | Frontend Developer    |
+| [Argha]     | Backend Developer     |
+| [Imran]     | UI/UX Designer        |
+| [Souvik]     | Project Manager       |
+| [Aritra]     | Backend Developer     |
+| [Asmita]     | Backend Developer     |
