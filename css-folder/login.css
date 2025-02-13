@@ -167,12 +167,11 @@ body{
     color: red;
     margin-top: 10px;
 }
-.toggle-link {
+.toggle-link-login,.toggle-link-signup {
     margin-top: 15px;
     color: #9fe76f;
     cursor: pointer;
 }
-
 
 .footer-container{
     display: flex;

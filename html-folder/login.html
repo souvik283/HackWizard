@@ -34,9 +34,9 @@
             <label for="login-password" class="input-label">Password</label>
             <input type="password" id="login-password">
         </div>
-        <button class="btn" onclick="validateLogin()">Login</button>
+        <button class="btn btn-login">Login</button>
         <p class="error-message" id="login-error-message"></p>
-        <p class="toggle-link" onclick="showSignUp()">Don't have an account? Sign Up</p>
+        <p class="toggle-link-signup">Don't have an account? Sign Up</p>
     </div>
     
     <div class="container" id="signup-container" style="display: none;">
@@ -53,57 +53,12 @@
             <label for="signup-confirm-password">Confirm Password</label>
             <input type="password" id="signup-confirm-password">
         </div>
-        <button class="btn" onclick="validateSignUp()">Sign Up</button>
+        <button class="btn btn-signup" onclick="validateSignUp()">Sign Up</button>
         <p class="error-message" id="signup-error-message"></p>
-        <p class="toggle-link" onclick="showLogin()">Already have an account? Login</p>
+        <p class="toggle-link-login">Already have an account? Login</p>
     </div>
     </div>
-    
-    <script>
-        function validateLogin() {
-            const username = document.getElementById("login-username").value;
-            const password = document.getElementById("login-password").value;
-            const errorMessage = document.getElementById("login-error-message");
-            
-            if (username === "admin" && password === "password123") {
-                alert("Login successful!");
-                errorMessage.textContent = "";
-            } else {
-                errorMessage.textContent = "Invalid username or password";
-            }
-        }
-
-        function validateSignUp() {
-            const username = document.getElementById("signup-username").value;
-            const password = document.getElementById("signup-password").value;
-            const confirmPassword = document.getElementById("signup-confirm-password").value;
-            const errorMessage = document.getElementById("signup-error-message");
-
-            if (username === "" || password === "" || confirmPassword === "") {
-                errorMessage.textContent = "All fields are required";
-                return;
-            }
-
-            if (password !== confirmPassword) {
-                errorMessage.textContent = "Passwords do not match";
-                return;
-            }
-
-            alert("Sign up successful!");
-            errorMessage.textContent = "";
-            showLogin();
-        }
-
-        function showSignUp() {
-            document.getElementById("login-container").style.display = "none";
-            document.getElementById("signup-container").style.display = "block";
-        }
-
-        function showLogin() {
-            document.getElementById("signup-container").style.display = "none";
-            document.getElementById("login-container").style.display = "block";
-        }
-    </script>
+    <script src="/js-folder/login.js"></script>
     <footer>
         <div class="footer-container">
             <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
