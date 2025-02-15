@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleaning</title>
+    <link rel="stylesheet" href="/css-folder/nav.css">
 <link rel="stylesheet" href="/css-folder/cleaning.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -34,7 +35,10 @@
 </div>
     </div>
 </div>
-
+<div class="body-container">
+    <div class="container">
+        <h1>Request for Cleaning</h1>
+        <p>Request for cleaning by uploading an image of the location</p>
     <div class="img-upload-container">
         <h2>REQUEST FOR CLEANING</h2>
         <p>Upload an Image</p>
@@ -44,96 +48,26 @@
             <br><br>
             <button type="submit">Upload</button>
         </form>
-    
         <div class="preview">
             <h2>Image Preview</h2>
             <img id="preview-image" src="#" alt="Image Preview" style="display:none;">
         </div>
     
-        <script src="/js-folder/cleaning.js"></script>
     </div>
-    <div>
+    <div class="comment-container">
         <label for="comment">write a comment</label>
         <input type="text" id="comment" name="comment" maxlength="150px" size="50" placeholder="write comment">
     </div>
-    <div><script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-    </head>
-    <body>
-        <div class="container">
+    <div>
+        <div class="location-container">
             <h1>Your Location</h1>
             <button onclick="getLocation()">Get My Location</button>
             <div id="status" class="status"></div>
             <div id="map"></div>
         </div>
-    
-        <script>
-            let map;
-            let marker;
-    
-            function initMap(lat, lon) {
-                if (!map) {
-                    map = L.map('map').setView([lat, lon], 13);
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '© OpenStreetMap contributors'
-                    }).addTo(map);
-                } else {
-                    map.setView([lat, lon], 13);
-                }
-    
-                if (marker) {
-                    marker.remove();
-                }
-                
-                marker = L.marker([lat, lon]).addTo(map);
-                marker.bindPopup("You are here!").openPopup();
-            }
-    
-            function getLocation() {
-                const status = document.getElementById('status');
-                
-                if (!navigator.geolocation) {
-                    status.textContent = 'Geolocation is not supported by your browser';
-                    status.className = 'status error';
-                    return;
-                }
-    
-                status.textContent = 'Locating...';
-                status.className = 'status';
-    
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const lat = position.coords.latitude;
-                        const lon = position.coords.longitude;
-                        
-                        status.textContent = `Located at: ${lat.toFixed(4)}, ${lon.toFixed(4)}`;
-
-                        status.className = 'status success';
-                        
-                        initMap(lat, lon);
-                    },
-                    (error) => {
-                        switch(error.code) {
-                            case error.PERMISSION_DENIED:
-                                status.textContent = 'User denied the request for Geolocation';
-                                break;
-                            case error.POSITION_UNAVAILABLE:
-                                status.textContent = 'Location information is unavailable';
-                                break;
-                            case error.TIMEOUT:
-                                status.textContent = 'The request to get user location timed out';
-                                break;
-                            default:
-                                status.textContent = 'An unknown error occurred';
-                        }
-                        status.className = 'status error';
-                    }
-                );
-    
-            }
-        </script></div>
-
-
-
+    </div>
+    </div>
+    </div>
 <footer>
     <div class="footer-container">
         <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
@@ -145,6 +79,8 @@
     </div>
     </div>
 </footer>
+<script src="/js-folder/cleaning.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 </body>
 
 </html>
