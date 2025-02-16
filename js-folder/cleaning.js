@@ -60,7 +60,6 @@ function getLocation() {
             status.textContent = `Located at: ${lat.toFixed(4)}, ${lon.toFixed(4)}`;
 
             status.className = 'status success';
-            
         },
         (error) => {
             switch(error.code) {

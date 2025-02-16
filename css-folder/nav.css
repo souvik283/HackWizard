@@ -63,17 +63,8 @@
     color: #fff;
     transition: 0.75s;
 }
-.menu {
-    position: absolute;
-    color: #AEF6C7;
-    top: 30px;
-    right: 1px;
-    height: 10px;
-    margin-right: 7px;
-    border-radius: 10px;
-}
 
-.hamburger-btn {
+ .hamburger-btn {
     background:none;
     color: #AEF6C7;
     border: none;
@@ -81,7 +72,7 @@
     cursor: pointer;
 }
 
-.dropdown-content {
+ .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
@@ -90,7 +81,7 @@
     min-width: 100px;
 }
 
-.menu:hover .dropdown-content {
+ .menu:hover .dropdown-content {
     display: block;
 }
 

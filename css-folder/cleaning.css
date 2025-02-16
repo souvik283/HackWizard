@@ -23,10 +23,40 @@ body{
     text-align: center;
     border: 1px solid #ccc;
     backdrop-filter: blur(10px);
-    margin-bottom: 40px;
+    margin-bottom: 200px;
 }
 
-
+.img-upload-container{
+color:white;
+}
+.container {
+    /* Add styles to the container div */
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container > div {
+    /* Add styles to the direct children divs of the container */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container > div > div {
+    /* Add styles to the grandchildren divs of the container */
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
 
 
 
