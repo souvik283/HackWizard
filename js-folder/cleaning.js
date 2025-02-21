@@ -1,22 +1,35 @@
 // Purpose: To provide the functionality for the cleaning page
 //upload image function
+const fileInput = document.getElementById('fileInput');
+const preview = document.getElementById('preview');
+const deleteButton = document.getElementById('deleteButton');
 
-const imageUpload = document.getElementById('image-upload');
-const previewImage = document.getElementById('preview-image');
-
-imageUpload.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            previewImage.src = e.target.result;
-            previewImage.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-    } else {
-        previewImage.style.display = 'none';
-    }
+// Display the selected image
+fileInput.addEventListener('change', function() {
+  const file = this.files[0];
+  if (file) {
+    const imageURL = URL.createObjectURL(file);
+    preview.src = imageURL;
+    preview.style.display = 'block';
+    deleteButton.style.display = 'inline-block';
+  }
 });
+
+// Delete the image and reset input
+deleteButton.addEventListener('click', function() {
+  preview.src = '';
+  preview.style.display = 'none';
+  fileInput.value = '';
+  deleteButton.style.display = 'none';
+});
+
+
+
+
+
+function submitComment() {
+    const comment = document.getElementById('comment').value;
+}
 
 //map function
 let map;
