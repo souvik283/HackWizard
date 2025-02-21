@@ -7,9 +7,6 @@ body{
     background-size: cover;
    min-height:100vh;
 }
-
-
-
 .body-container {
     display: flex;
     justify-content: center;
@@ -53,7 +50,7 @@ body{
     height: 50px;
     margin-top:20px;
     border-radius: 5px;
-    border: 1px solid #ffffff;
+    border: 1px solid white;
     padding: 10px;
 }
 
