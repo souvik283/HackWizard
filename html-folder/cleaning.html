@@ -13,7 +13,7 @@
 
 <div class="header-container">
 <div class="header-left-side">
-<h1>SMART INDIA <br>CLEAN INDIA</h1>
+<a href="/"><h1>SMART INDIA <br>CLEAN INDIA</h1></a>
 <img src="/images/indialogo.png" alt="india logo">
 </div>
 <div class="header-right-side">
@@ -29,7 +29,7 @@
         onclick="toggleMenu()">☰</button>
     <div class="dropdown-content">
         <a href="#">***</a>
-        <a href="#">Contact Us</a>
+        <a href="/html-folder/contact.html">Contact Us</a>
         <a href="#">About us</a>
     </div>
 </div>
@@ -38,23 +38,17 @@
 <div class="body-container">
     <div class="container">
     <div class="img-upload-container">
-        <h2>REQUEST FOR CLEANING</h2>
-        <p>Upload an Image</p>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="image-upload">Choose an image:</label>
-            <input type="file" id="image-upload" name="image" accept="image/*">
-            <br><br>
-            <button type="submit">Upload</button>
-        </form>
-        <div class="preview">
-            <h2>Image Preview</h2>
-            <img id="preview-image" src="#" alt="Image Preview" style="display:none;">
-        </div>
-    
+        <div class="container">
+            <h2>Upload Your Photo</h2>
+            <input type="file" id="fileInput" accept="image/*">
+            <img id="preview" style="display: none;" alt="Uploaded Photo">
+            <br>
+            <button id="deleteButton" style="display: none;">Delete Photo</button>
+          </div>
     </div>
     <div class="comment-container">
-        <label for="comment">write a comment</label>
         <input type="text" id="comment" name="comment" maxlength="150px" size="50" placeholder="write comment">
+        <button onclick="submitComment()">Submit</button>
     </div>
     <div>
         <div class="location-container">

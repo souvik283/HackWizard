@@ -3,68 +3,87 @@ body{
     padding:0; 
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
-    background: url("/images/waste-background2.jpeg") no-repeat center center fixed;
+    background: url("/images/Untitled design (3).png") no-repeat center center fixed;
     background-size: cover;
    min-height:100vh;
 }
 .body-container {
     display: flex;
     justify-content: center;
-    align-items: center;    
-    flex-direction: column;
-    margin-top:100px;
+    align-items: center;
+    height: 100vh;  
 }
-.container {
-    background:transparent;
+ .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: transparent;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    width: 500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
     text-align: center;
     border: 1px solid #ccc;
-    backdrop-filter: blur(10px);
-    margin-bottom: 200px;
-}
-
-.img-upload-container{
-color:white;
-}
-.container {
-    /* Add styles to the container div */
-    width: 80%;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
   }
-  
-  .container > div {
-    /* Add styles to the direct children divs of the container */
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+  input[type="file"] {
+    margin: 20px 0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  button {
+    background: #CFFFB0;
+    color:black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #9ee370;
+  }
+
+.comment-container input{
+    height: 50px;
+    margin-top:20px;
     border-radius: 5px;
-  }
-  
-  .container > div > div {
-    /* Add styles to the grandchildren divs of the container */
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 3px;
-  }
+    border: 1px solid white;
+    padding: 10px;
+}
 
+.comment-container input::placeholder{
+    color: #ccc;
+    text-align:justify;
+}
 
+.comment-container button{
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid none;
+    padding: 10px;
+    background-color: #CFFFB0;
+    color: black;
+    cursor: pointer;
+}
+.body-container button:hover{
+    background-color: #9ee370;
+}   
 
-
-
-
-
-
+#fileInput{
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid none;
+    padding: 10px;
+    background-color: rgba(207,255,176,0.6);
+    color: black;
+    cursor: pointer;
+}
+#status{
+    margin-top: 20px;color: #000000;
+}
 
 
 
