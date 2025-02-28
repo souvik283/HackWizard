@@ -18,7 +18,7 @@
     font-size:15px;
     letter-spacing: 2px;
 }
-.request-btn{
+.request-btn,.contact-btn{
     display: inline-block;
     text-decoration: none;
     color:#fff;
@@ -28,7 +28,7 @@
     position:relative;
     cursor: pointer;
 }
-.request-btn:hover{
+.request-btn:hover,.contact-btn:hover{
     border: 1px solid #f44336;
     background-color: #f44336;
     transition: 1s;
@@ -38,16 +38,11 @@
     margin: auto;
     text-align:center;
     padding-top: 100px;
+    
 }
 h1{
     font-size: 36px;
     font-weight:600px;
-}
-p{
-    color:#777;
-    font-size:300;
-    line-height:22px;
-    padding:10px;
 }
 .row{
     margin:5%;
@@ -56,7 +51,6 @@ p{
     width:80%;
     margin: auto;
     text-align:center;
-    padding-top: 100px;
 }
 h1 {
     font-size: 36px;
@@ -81,7 +75,76 @@ h3{
     font-weight:600;
     margin:10px 0;
 }
+p{
+    color:#777;
+    font-size:300;
+    line-height:22px;
+    padding:10px;
+}
 .service-col:hover{
     box-shadow:0 0 20px 0px rgba(0,0,0,0.2);
     transition: 0.5s;
+}
+.weekly-reports{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:50px;
+
+}
+.image-col{
+    flex-basis:31%;
+    border-radius:10px;
+    margin-bottom:30px;
+    position:relative;
+    overflow:hidden;
+}
+.image-col img{
+    width:100%;
+    height: 100%;
+
+}
+.layer{
+    background: transparent;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width:100%;
+    font-weight: 500;
+    color:#fff;
+    font-size:26px;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition:0.5s;
+}
+.layer:hover h3{
+    bottom:45%;
+    opacity: 1;
+}
+
+.cta{
+    margin:100px auto ;
+    width:80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/Untitled\ design.png);
+    background-position:center;
+    background-size:cover;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 0;
+}
+.cta h1{
+    color:#fff;
+    margin-bottom:20px;
+    padding:0;
 }

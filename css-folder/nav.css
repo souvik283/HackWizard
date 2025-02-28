@@ -29,7 +29,6 @@ nav a{
     font-weight: bold;
 
 }
-
  nav img{
     width: 100px;
 
@@ -74,7 +73,9 @@ nav a{
     height:50px;
     bottom: 0;
     width: 102%;
-    position: fixed;
+}
+.footer-container p{
+    color:white;
 }
 .social-icon{
     display: flex;
