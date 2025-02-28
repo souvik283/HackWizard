@@ -1,11 +1,6 @@
-body{
-    margin:0;
-    padding:0; 
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    background: url("/images/Untitled design (3).png") no-repeat center center fixed;
-    background-size: cover;
-   min-height:100vh;
+.header{
+    background-image:linear-gradient(rgba(4,9,30,0.5),
+    rgba(4,9,30,0.7)),url(/images/Untitled\ design\ \(3\).png);
 }
 .body-container {
     display: flex;
