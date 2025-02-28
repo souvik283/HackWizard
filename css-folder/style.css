@@ -2,6 +2,7 @@
 .header{
     background-image:linear-gradient(rgba(4,9,30,0.5),
     rgba(4,9,30,0.7)),url(/images/Untitled\ design\ \(1\).png);
+    min-height: 100vh;
 }
 .text-box{
     width: 90%;
