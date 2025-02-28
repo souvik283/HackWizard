@@ -20,10 +20,10 @@
                     <a href="/">HOME</a>
                 </li>
                 <li>
-                    <a href="About.html">ABOUT</a>
+                    <a href="/html-folder/about.html">ABOUT</a>
                 </li>
                 <li>
-                    <a href="html-folder/login.html">LOGIN</a>
+                    <a href="/html-folder/login.html">LOGIN</a>
                 </li>
                 <li>
                     <a href="/html-folder/profile.html">PROFILE</a>
@@ -40,25 +40,26 @@
     <div class="img-upload-container">
         <div class="upload">
             <h2> upload image of waste</h2>
-            <input type="file" id="fileInput" accept="image/*">
+            <input type="file" id="fileInput" accept="image/*" onclick="displayPerview()">
           </div>  
     </div>
     <div class="comment-container">
         <input type="text" id="comment" name="comment" maxlength="150px" size="50" placeholder="Write Comment">
-        <button onclick="submitComment()">Submit</button>
     </div>
     <div>
         <div class="location-container">
-            <h1>Waste Location</h1>
-            <button onclick="getLocation()"> Get Waste Location</button>            <div id="status" class="status"></div>
+            <h2>Waste Location</h2>
+            <button onclick="getLocation()"> Get Waste Location</button>           
+             <div id="status" class="status"></div>
             <div id="map"></div>
+            <button onclick="submitComment()" style="display: none;" class="submit-btn">Submit</button>
         </div>
     </div>
     </div> 
-    <div class="preview">
+    <div class="preview" style="display:none;">
         <img id="preview" style="display:none;" alt="Upload Photo">
         <br>
-        <button id="deleteButton" style="display:none;">Delete</button>
+        <button id="deleteButton" style="display:none;" onclick="deletePreview()">Delete</button>
       </div>
     </div>
               
