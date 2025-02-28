@@ -20,7 +20,7 @@
 }
 .container h2 {
     margin-bottom: 20px;
-    color:#CFFFB0;
+    color:#ffde3b;
 }
 .input-group {
     margin-bottom: 15px;
@@ -29,7 +29,7 @@
 .input-group label {
     display: block;
     font-weight: bold;
-    color:#CFFFB0;
+    color:#ffde3b;
 }
 .input-group input {
     width: 100%;
@@ -44,15 +44,15 @@
 }
 .input-group input:focus {
     outline: none;
-    border-color:#CFFFB0;
-    box-shadow: 0 0 5px #CFFFB0;
+    border-color:#ffde3b;
+    box-shadow: 0 0 5px #ffde3b;
     background: transparent;
   }
   
 .btn {
     width: 100%;
     padding: 10px;
-    background: #CFFFB0;
+    background: #ffde3b;
     color: black;
     border: none;
     border-radius: 20px;
@@ -60,7 +60,7 @@
     margin-top: 15px;
 }
 .btn:hover {
-    background:#9fe76f;
+    background:#eec705;
 }
 .error-message {
     color: red;
@@ -68,6 +68,6 @@
 }
 .toggle-link-login,.toggle-link-signup {
     margin-top: 15px;
-    color: #9fe76f;
+    color: #ffde3b;
     cursor: pointer;
 }
