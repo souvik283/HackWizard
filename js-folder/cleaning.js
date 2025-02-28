@@ -22,11 +22,6 @@ deleteButton.addEventListener('click', function() {
   fileInput.value = '';
   deleteButton.style.display = 'none';
 });
-
-
-
-
-
 function submitComment() {
     const comment = document.getElementById('comment').value;
 }
@@ -91,5 +86,15 @@ function getLocation() {
             status.className = 'status error';
         }
     );
-
+   const submitbtn=document.getElementsByClassName('submit-btn');
+   submitbtn[0].style.display='block';
+    submitbtn[0].style.marginLeft='150px';
+}
+function displayPerview() {
+    const preview = document.querySelector('.preview');
+    preview.style.display = 'flex';
+}
+function deletePreview() {
+    const preview = document.querySelector('.preview');
+    preview.style.display = 'none';
 }

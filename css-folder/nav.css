@@ -4,7 +4,6 @@
     font-family: arial;
 }
 .header{
-    min-height: 100vh;
     width:100%;
     background-position: center;
     background-size: cover;
@@ -60,6 +59,36 @@ nav a{
     width:100%;
 }
 
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-link ul li {
+        display:block;
+    }
+    .nav-link{
+        position: absolute;
+        background:#f44336;
+        height:100vh;
+        width:200px;
+        right:0;
+        top:0;
+        text-align:left;
+        z-index:2;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .testimonial-col img{
+        margin-left:0px;
+        margin-right: 15px;
+    }
+    .cta h1{
+        font-size:24px;
+    }
+}
+
+
 /*footer*/
 .footer-container{
     display: flex;
@@ -75,15 +104,6 @@ nav a{
 }
 .footer-container p{
     color:white;
-}
-.social-icon{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    width:250px;
-    cursor: pointer;
 }
 .social-icon{
     display: flex;
