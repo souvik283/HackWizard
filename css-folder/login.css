@@ -1,20 +1,17 @@
-body{
-    margin:0;
-    padding:0;
-    font-family: Arial, sans-serif;
-    background: url("/images/background.jpg") no-repeat  center center fixed;
-    background-size:cover;
+.header{
+    background-image:linear-gradient(rgba(4,9,30,0.5),
+    rgba(4,9,30,0.7)),url(/images/Untitled\ design\ \(2\).png);
+    min-height: 120vh;
 }
 .body-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-bottom: 50px;
 }
 .container {
     background:transparent;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     width: 300px;
     text-align: center;
@@ -39,7 +36,6 @@ body{
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 20px;
     box-sizing: border-box;
     background: transparent;
     color: White ;
