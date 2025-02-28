@@ -10,49 +10,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="header-container">
- <div class="header-left-side">
-    <h1>SMART INDIA <br>CLEAN INDIA</h1>
-    <img src="/images/indialogo.png" alt="india logo">
- </div>
-  <div class="header-right-side">
-    <div class="header-right-logo"><img src="/images/teamlogo.png" alt="hackWizards" height="30px">
-    </div>
- <div class="header-right-login">
-        <a href="/html-folder/login.html"><button>login</button></a>
-</div>
-    <div class="header-right-profile"><a href="/html-folder/profile.html"><img src="/images/profile.jpg" alt="profile"></a></div>
+        <section class="header">
+            <nav> 
+                <a href="index.html">Smart India Clean India</a>
+                <img src="/images/indialogo.png" alt="logo">
+            <div class="nav-link">
+                <ul>
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    <li>
+                        <a href="About.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="html-folder/login.html">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="/html-folder/profile.html">PROFILE</a>
+                    </li>
+                    <li>
+                        <a href="/html-folder/contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>
+                Making India Clean 
+            </h1>
+            <p>
+                Let us paint India with the hues of purity, where every corner shines bright and every life thrives in wellness.
+            </p>
+            <a href="/html-folder/cleaning.html" class="request-btn">Request For Cleaning</a>
+        </div>
+    </section>
+    <section class="services">
+        <h1> How ours service works</h1>
+        <div class="row">
+            <div class="service-col">
+                <h3>Send Garbage Image</h3>
+                <p>The user takes a photo of garbage using a mobile app, which sends the image and location data to a central server for further processing and action.</p>
+            </div>
+            <div class="service-col">
+                <h3>Request Processing</h3>
+                <p>The server verifies the image and location, identifies the appropriate area, and sends a cleaning request to the responsible corporator for further action and delegation.</p>
+            </div>
+            <div class="service-col">
+                <h3>Assigning Cleaning Workers</h3>
+                <p>The corporator receives the request, assigns cleaning workers to the location, and ensures the area is cleaned. Workers update the system once the cleaning task is completed.</p>
+            </div>
+        </div>
+    </section>
+    <section class="weekly-reports">
+        <h1>
+            Weekly Cleaning Report
+        </h1>
+        <div class="row">
+            <div class="image-col">
+                <img src="/images/cleaning1.jpg">
+                <div class="layer">
+                    <h3>BANGALORE</h3>
+                </div> 
+            </div>
+            <div class="image-col">
+                <img src="/images/cleaning2.jpg">
+                <div class="layer">
+                    <h3>KOLKATA</h3>
+                </div> 
+            </div>
+            <div class="image-col">
+                <img src="images/cleaning3.jpg">
+                <div class="layer">
+                    <h3>DELHI</h3>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h1>
+            We are love to hear from you! <br>Reach out with questions or feedback, <br>and we will respond as soon as possible.
+        </h1>
+        <a href="/html-folder/contact.html" class="contact-btn">CONTACT US</a>
+    </section>
 
-    <div class="menu">
-        <button class="hamburger-btn"
-            onclick="toggleMenu()">☰</button>
-        <div class="dropdown-content">
-            <a href="/html-folder/profile.html">Profile</a>
-            <a href="/html-folder/contact.html">Contact Us</a>
-            <a href="/html-folder/about.html">About us</a>
-        </div>
-    </div>
-        </div>
-</div>
-<div class="cleaning-req-container">
-    <div class="cleaning-req"><a href="/html-folder/cleaning.html"><button>Request for Cleaning</button></a>
-    </div>
-    <div class="recycling-req"><a href="/html-folder/recycling.html"><button>Request for Recycling</button></a>
-        </div>
-</div>
-<div class="body-content">
-
-    <div class="weekly-news">
-        <h2>Weekly News</h2>
-        <div><p> Get insights on our waste collection metries and see how much of a difference we'havae made this week.
-        </p></div>
-    </div>
-        <div class="weekly-pic">
-            <p> Picture</p>
-            <img src="/images/cleanning.png" alt="weekly news">
-        </div>
-</div>
-<footer>
+<section class="footer">
     <div class="footer-container">
         <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
         <div class="social-icon">
@@ -62,7 +103,8 @@
         <div> <a href="www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a></div>
     </div>
     </div>
-    <script src="/js-folder/index.js"></script>
-</footer>
+</section>
+<script src="/js-folder/index.js"></script>
 </body>
+
 </html>
