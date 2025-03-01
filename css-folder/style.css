@@ -33,8 +33,8 @@
     cursor: pointer;
 }
 .request-btn:hover,.contact-btn:hover{
-    border: 1px solid #f44336;
-    background-color: #f44336;
+    border: 1px solid #ffde3b;
+    background-color: #ffde3b;
     transition: 1s;
 }
 .services{
@@ -93,7 +93,6 @@ p{
     width:80%;
     margin:auto;
     text-align:center;
-    padding-top:50px;
 
 }
 .image-col{
@@ -118,7 +117,7 @@ p{
     transition:0.5s;
 }
 .layer:hover{
-    background: rgba(226,0,0,0.7);
+    background: rgba(255, 213, 3, 0.7);
 }
 .layer h3{
     width:100%;
