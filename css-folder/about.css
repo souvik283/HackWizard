@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image:linear-gradient(rgba(4,9,30,0.5),
+    rgba(4,9,30,0.7)),url(/images/about.jpg);
+    height: 95vh;
+}
+.header {
+    background: transparent;
+    color: rgb(5, 5, 5);
+    padding: 30px;
+    size: 20px;
+}
+.diff{
+    
+    color: rgb(230, 16, 16);
+}
+.commitment {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background:transparent;
+    color: white;
+}
+.commitment div {
+    width: 30%;
+}
+.image-section {
+    position: relative;
+}
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+.difference {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background:transparent;
+    color: white;
+}
+
+.difference-container {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 20px;
+}
+.difference div {
+    width: 30%;
+}
