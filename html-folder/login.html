@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Sign Up Page</title>
+
+      <!-- Load React and ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Load Babel to convert JSX -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- Load Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="/css-folder/nav.css">
     <link rel="stylesheet" href="/css-folder/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+
+    <script>
+       useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:8080/api/products");
+      setProducts(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setIsError(true);
+    }
+  };
+  
+  fetchData();
+}, []);
+        </script>
   
     <section class="header">
         <nav> 
