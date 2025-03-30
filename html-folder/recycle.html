@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Request Form</title>
+    <link rel="stylesheet" href="/css-folder/recycle.css">
+    <link rel="stylesheet" href="/css-folder/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <section class="header">
+    <nav>
+        <a href="index.html">Smart India Clean India</a>
+        <img src="/images/indialogo.png" alt="logo">
+    <div class="nav-link">
+        <ul>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/html-folder/about.html">ABOUT</a>
+            </li>
+            <li>
+                <a href="/html-folder/login.html">LOGIN</a>
+            </li>
+            <li>
+                <a href="/html-folder/profile.html">PROFILE</a>
+            </li>
+            <li>
+                <a href="/html-folder/contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="container">
+        <h1>Recycling Request Form</h1>
+        <div class="form-container">
+            <form id="recycling-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="waste-type">Type of Waste:</label>
+                <select id="waste-type" name="waste-type" required>
+                    <option value="" disabled selected>Select waste type</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="paper">Paper</option>
+                    <option value="metal">Metal</option>
+                    <option value="glass">Glass</option>
+                    <option value="e-waste">E-Waste</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <label for="location">Your Location:</label>
+                <input type="text" id="location" name="location" placeholder="Fetching location..." readonly>
+
+                <button type="button" id="get-location">Get My Location</button>
+
+                <label for="image-upload">Upload Image:</label>
+                <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
+              <br>
+                <div>
+                <button type="submit">Submit Request</button>
+                </div>
+            </form>
+            <div class="image-preview">
+                <h2>Image Preview</h2>
+                <img id="preview" src="" alt="Image Preview" style="display: none;">
+            </div>
+        </div>
+    </div>
+    
+
+    <section class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
+            <div class="social-icon">
+            <div> <a href="www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook fa-xl"></i></a></div>
+            <div> <a href="www.instsgram.com" target="_blank"> <i class="fa-brands fa-instagram fa-xl"></i></a></div>
+            <div> <a href="www.twitter.com" target="_blank"> <i class="fa-brands fa-x-twitter fa-xl"></i></a></div>
+            <div> <a href="www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a></div>
+        </div>
+        </div>
+    </section>
+
+    
+
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        document.getElementById('get-location').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    document.getElementById('location').value = `Lat: ${latitude}, Lon: ${longitude}`;
+                }, function() {
+                    alert('Unable to retrieve your location. Please allow location access.');
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        });
+    </script>
+   
+</body>
+</html>
