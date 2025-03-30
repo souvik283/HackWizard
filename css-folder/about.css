@@ -6,23 +6,23 @@ body {
     background-image:linear-gradient(rgba(4,9,30,0.5),
     rgba(4,9,30,0.7)),url(/images/about.jpg);
     height: 95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .header {
     background: transparent;
-    color: rgb(5, 5, 5);
+    color: white;
     padding: 30px;
     size: 20px;
+        font-size: 36px; 
+        font-weight: bold; 
+        line-height: 1.2; 
+    
 }
 .diff{
     
     color: rgb(230, 16, 16);
-}
-.commitment {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background:transparent;
-    color: white;
 }
 .commitment div {
     width: 30%;
@@ -50,4 +50,38 @@ body {
 }
 .difference div {
     width: 30%;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.diff {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.commitment {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin: 20px;
+}
+
+.commitment > div {
+    background-color: rgba(249, 249, 249, 0.7);
+    border: 1px solid rgba(204, 204, 204, 0.7);
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 10px; 
+    width: 30%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.commitment h3 {
+    color: #333; 
+}
+
+.commitment p {
+    color: #666; 
 }
