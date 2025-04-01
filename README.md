@@ -18,8 +18,8 @@ Our goal is to promote sustainability by reducing inefficiencies in waste collec
 
 ## 🛠️ *Tech Stack*
 - *Frontend:* HTML, CSS, JavaScript
-- *Backend:* JAVA (Spring Boot)
-- *Database:* MYSQL
+- *Backend:* JAVA (Spring Boot),NdeJs,ExpressJS
+- *Database:* MYSQL, MongoDB
 - *Version Control:* Git & GitHub
 
 ## 👥 *HackWizards*
@@ -28,9 +28,9 @@ We are a team of passionate innovators dedicated to building sustainable solutio
 
 | *Name*         | *Role*              |
 |------------------|-----------------------|
-| Rajib     | Team Lead   |
-| Argha     | Backend Developer     |
-| Imran     | Frontend Developer    |
-| Souvik     | Frontend Developer     |
-| Aritra     | Presenting Team     |
-| Asmita     | Presenting Team    |
+| Rajib     | FrontEnd Developer|
+| Argha     | Backend Developer|
+| Imran     | FullStack Developer|
+| Souvik     | Frontend Developer|
+| Aritra     | Pitcher|
+| Asmita     | Designer |
