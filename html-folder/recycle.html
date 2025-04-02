@@ -37,12 +37,7 @@
         <h1>Recycling Request Form</h1>
         <div class="form-container">
             <form id="recycling-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-
+               
                 <label for="waste-type">Type of Waste:</label>
                 <select id="waste-type" name="waste-type" required>
                     <option value="" disabled selected>Select waste type</option>
@@ -57,20 +52,25 @@
                 <textarea id="description" name="description" rows="4" required></textarea>
 
                 <label for="location">Your Location:</label>
-                <input type="text" id="location" name="location" placeholder="Fetching location..." readonly>
+                <input type="text" id="location" name="location" >
+<div class="Button-container">
+    <button type="button" id="get-location">Get My Location</button>
 
-                <button type="button" id="get-location">Get My Location</button>
+               
+    <br>
+      <div>
+      <button type="submit">Submit Request</button>
+      </div>
 
-                <label for="image-upload">Upload Image:</label>
-                <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
-              <br>
-                <div>
-                <button type="submit">Submit Request</button>
-                </div>
+</div>
+               
             </form>
             <div class="image-preview">
                 <h2>Image Preview</h2>
-                <img id="preview" src="" alt="Image Preview" style="display: none;">
+                <div class="mypoint"><img id="preview" src="" alt="Image Preview" style="display: none;">
+                </div>
+                <label for="image-upload"></label>
+                <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
             </div>
         </div>
     </div>
