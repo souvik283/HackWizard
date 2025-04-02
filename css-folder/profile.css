@@ -4,9 +4,9 @@ html, body {
    font-family: Arial, sans-serif;
    padding: 20px;
    background-color: black;
-      background-image:linear-gradient(rgba(4,9,30,0.5),
-      rgba(4,9,30,0.7)),url(/images/Untitled\ design\ \(3\).png);
-      height: 95vh;
+      background-image:linear-gradient(rgba(4,9,30,0.5),url(/images/background.jpg)
+      rgba(4,9,30,0.7));
+      height: auto;
       background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -30,14 +30,16 @@ body {
     width: 100%; /* Ensure it takes the full width */
     max-width: 100%; /* Remove any max-width constraints */
     background: white;
-    padding: 20px;
+    padding: 10px;
+    padding-right:1px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto; /* Allow scrolling if content exceeds height */
     margin-bottom: 180px;
     background-color: transparent ;
     border: 5px solid white;
-    margin-right: auto;
+   margin-left: -15px;
+   margin-bottom: 300px;
 }
 .profile-info {
    flex: 2;
@@ -80,13 +82,13 @@ button {
    margin-right: 10px;
    border: none;
    border-radius: 4px;
-   background-color: #ffe357;
+   background-color: green;
    color: white;
    cursor: pointer;
 }
 
 button:hover {
-   background-color: #0056b3;
+   background-color: greenyellow;
 }
 
 .photo-placeholder {

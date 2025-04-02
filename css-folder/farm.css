@@ -1,9 +1,8 @@
 .header{
-    background-image:linear-gradient(rgba(4,9,30,0.5),
-    rgba(4,9,30,0.7)),url(/images/profile-bacground.jpg);
-    height: 100vh;
+   background-color: black;
+    height: auto;
  }
- .mai
+ 
 
 body {
     font-family: Arial, sans-serif;
@@ -81,6 +80,7 @@ textarea {
     border: 1px solid #ccc;
     background-color: transparent;
     border-radius: 4px;
+    color: white;
 }
 
 button {
@@ -91,6 +91,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-right: 10px;
 }
 
 button:hover {
