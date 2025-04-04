@@ -1,21 +1,22 @@
 html, body {
-   height: 100%;
-   margin: 0;
+      margin: 0;
    font-family: Arial, sans-serif;
    padding: 20px;
-   background-color: black;
-      background-image:linear-gradient(rgba(4,9,30,0.5),url(/images/background.jpg)
-      rgba(4,9,30,0.7));
-      height: auto;
-      background-repeat: no-repeat;
-    background-size: cover;
+   background-image:linear-gradient(rgba(4,9,30,0.5),
+    rgba(4,9,30,0.7)),url(/images/profileback.jpg);
+    min-height: 120vh;
+    background-repeat: no-repeat;
     background-position: center;
-      
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}   
 
       
 
 
-}
+
 
 
 body {
