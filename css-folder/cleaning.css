@@ -1,8 +1,11 @@
 .header{
     background-image:linear-gradient(rgba(4,9,30,0.5),
-    rgba(4,9,30,0.7)),url(/images/background.jpg);
+    rgba(4,9,30,0.7)),url(/images/Cleaningpage.jpg);
     min-height: 120vh;
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 500px;
 }
 
 body {
@@ -30,7 +33,8 @@ body {
 
 h1 {
     text-align: center;
-    color: #2ed633;
+    color: white;
+    text-decoration: underline;
 }
 
 .form-container {
