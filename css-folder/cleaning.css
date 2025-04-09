@@ -18,8 +18,9 @@ body {
 
 
 .container {
+    position :relative;
     margin-bottom: 100px;
-    max-width: 850px;
+    max-width: 700px;
     margin: 30px auto;
     padding: 20px;
     background-color: transparent;
@@ -28,7 +29,7 @@ body {
     border-color: black;
     margin-top: -40px;
     margin-bottom: 280px;
-
+ 
 }
 
 h1 {
@@ -61,7 +62,7 @@ textarea {
 }
 
 button {
-    background-color: #4CAF50; 
+    background-color: #ffde3b; 
     color: white;
     padding: 10px 15px;
     border: none;
@@ -74,40 +75,43 @@ button {
 
 
 button:hover {
-    background-color: #45a049; 
+    background-color: #e3c013; 
 }
 
 image-preview {
     flex: 1;
     text-align: center;
    
+   
 }
 
 
 .image-preview {
-    border: 2px dashed #4CAF50; 
-    padding: 1px; 
+    
+    border: 2px dashed #ffde3b; 
+    padding: 5px; 
     background-color: transparent; 
     border-radius: 5px; 
     text-align: center; 
     margin-top: 32px; 
     margin-left: 30px;
-    height: auto;
-    width: auto;
-    margin-left: 600px;
+    height:auto;
+    width: 400px;
+    box-shadow: 0 0 5px #ffde3b;
+
     
 }
 
 .image-preview img {
-    height: auto;
-    width: auto; /* Maintain aspect ratio */
+    width: 300px; 
     max-width: 200px;
-    max-height: 200px;
-    border-radius: 5px; /* Rounded corners for the image */
+    max-height: 250px;
+    border-radius: 5px; 
     
 }
 .Button-container {
-    display: flex; /* Use flexbox to align items in a row */
-    align-items: center; /* Align items vertically in the center */
+    display: flex; 
+    align-items: center; 
+
 }
 
