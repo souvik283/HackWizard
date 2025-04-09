@@ -31,6 +31,9 @@
     background-color: transparent;
     position:relative;
     cursor: pointer;
+    margin-left:20px;
+    margin-bottom: 20px;
+    width: 230px;
 }
 .request-btn:hover,.contact-btn:hover{
     border: 1px solid #ffde3b;
@@ -139,7 +142,7 @@ p{
 .cta{
     margin:100px auto ;
     width:80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/Untitled\ design.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/Untitleddesign.png);
     background-position:center;
     background-size:cover;
     border-radius:10px;
