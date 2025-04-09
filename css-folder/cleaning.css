@@ -14,9 +14,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
-
 .container {
     position :relative;
     margin-bottom: 100px;
@@ -29,7 +26,6 @@ body {
     border-color: black;
     margin-top: -40px;
     margin-bottom: 280px;
- 
 }
 
 h1 {
@@ -54,13 +50,16 @@ select,
 textarea {
     background-color: transparent;
     width: 97%;
-    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 4px;
     color: white;
-}
+    font-size: 17px;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 0 0 10px #ffffff;
 
+}
 button {
     background-color: #ffde3b; 
     color: white;
@@ -87,7 +86,9 @@ image-preview {
 
 
 .image-preview {
-    
+    display:flex;
+    align-items: center;
+    justify-content: center;
     border: 2px dashed #ffde3b; 
     padding: 5px; 
     background-color: transparent; 
@@ -98,8 +99,8 @@ image-preview {
     height:auto;
     width: 400px;
     box-shadow: 0 0 5px #ffde3b;
-
-    
+    flex-direction: column;
+    margin-left:280px;
 }
 
 .image-preview img {
@@ -113,5 +114,35 @@ image-preview {
     display: flex; 
     align-items: center; 
 
+}
+@media(max-width:750px){
+    
+.container {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    max-width: 300px;
+    margin: 30px auto;
+    background-color: transparent;
+    margin-bottom: 200px;
+}
+.image-preview {
+    border: 2px dashed #ffde3b; 
+    padding: 5px; 
+    background-color: transparent; 
+    border-radius: 5px; 
+    text-align: center; 
+    margin-top: 32px; 
+    margin-left: 30px;
+    height:auto;
+    width: 200px;
+    margin-left: 50px;
+
+}
+.image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    
+}
 }
 
