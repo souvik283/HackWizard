@@ -57,16 +57,13 @@
                 <label for="location">Your Location:</label>
                 <input type="text" id="location" name="location" >
 <div class="Button-container">
-    <button type="button" id="get-location">Get My Location</button>
-
-               
+    <button type="button" id="get-location">Get My Location</button>        
     <br>
       <div>
       <button class="submit-btn"  type="submit">Submit Request</button>
       </div>
 
-</div>
-               
+</div>    
             </form>
             <div class="image-preview">
                 <h2>Image Preview</h2>
@@ -77,8 +74,6 @@
             </div>
         </div>
     </div>
-    
-
     <section class="footer">
         <div class="footer-container">
             <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
@@ -91,38 +86,9 @@
         </div>
     </section>
 
-    
+ <script src="/js-folder/recycle.js"></script>
  <script src="/js-folder/nav.js"></script>
-    <!-- <script>
-        function previewImage(event) {
-            const preview = document.getElementById('preview');
-            const file = event.target.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            }
-
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        }
-
-        document.getElementById('get-location').addEventListener('click', function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    document.getElementById('location').value = `Lat: ${latitude}, Lon: ${longitude}`;
-                }, function() {
-                    alert('Unable to retrieve your location. Please allow location access.');
-                });
-            } else {
-                alert('Geolocation is not supported by this browser.');
-            }
-        });
-    </script> -->
+   
    
 </body>
 </html>
