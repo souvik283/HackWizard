@@ -94,11 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Get comment and location values from form
 
-      const nameInput = document.getElementById('name');
+      const TypeOfWasteInput = document.getElementById('waste-type');
       const commentInput = document.getElementById('comment');
       const locationInput = document.getElementById('location');
       
-      const name = nameInput ? nameInput.value : '';
+      const TypeOfWaste = TypeOfWasteInput ? TypeOfWasteInput.value : '';
       const comment = commentInput ? commentInput.value : '';
       const location = locationInput ? locationInput.value : '';
       
@@ -121,16 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append("imageFile", compressedImage);
         
         // Create Clean object with required fields
-        const cleanData = {
-          name : name,
+        const recycleData = {
+            TypeOfWaste : TypeOfWaste,
           comment: comment,
           location: location
         };
         
-        formData.append("clean", new Blob([JSON.stringify(cleanData)], { type: "application/json" }));
+        formData.append("recycle", new Blob([JSON.stringify(recycleData)], { type: "application/json" }));
         
         console.log("Sending request to server...");
-        const response = await fetch('http://localhost:8080/clean', {
+        const response = await fetch('http://localhost:8080/recycle', {
           method: 'POST',
           body: formData
         });
@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const result = await response.json();
-        console.log("clean request submitted succceaafullly", result);
-        alert("clean request submitted successfully");
+        console.log("recycle request submitted succceaafullly", result);
+        alert("recycle request submitted successfully");
         
       } catch (error) {
         console.error('Detailed error information:', error);

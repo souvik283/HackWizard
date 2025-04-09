@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Sign Up Page</title>
+
+      <!-- Load React and ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Load Babel to convert JSX -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- Load Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="/css-folder/nav.css">
     <link rel="stylesheet" href="/css-folder/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+
+   
   
     <section class="header">
         <nav> 
@@ -50,33 +61,39 @@
         <div class="container" id="signup-container" style="display: none;">
             <h2>Sign Up</h2>
             <div class="input-group">
-                <label for="signup-fullname">Full Name</label>
-                <input type="text" id="signup-fullname">
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
             </div>
             <div class="input-group">
-                <label for="Email">Email</label>
-                <input type="email" id="signup-email">
+                <label for="email">Email</label>
+                <input type="email" id="email">
             </div>
             <div class="input-group">
-                <label for="Mobile">Mobile</label>
-                <input type="number" id="signup-mobile">
+                <label for="mobile">Mobile</label>
+                <input type="number" id="mobile">
             </div>
-           
             <div class="input-group">
-                <label for="signup-password">Password</label>
+                <label for="location">Location</label>
+                <input type="location" id="location">
+            <div class="input-group">
+            <div class="input-group">
+                <label for="pincode">Pin Number</label>
+                <input type="number" id="pincode">
+            <div class="input-group">
+                <label for="password">Password</label>
                 <input type="password" id="signup-password">
             </div>
             <div class="input-group">
                 <label for="signup-confirm-password">Confirm Password</label>
                 <input type="password" id="signup-confirm-password">
             </div>
-            <button class="btn btn-signup" onclick="validateSignUp()">Sign Up</button>
+            <button class="btn btn-signup" >Sign Up</button>
             <p class="error-message" id="signup-error-message"></p>
             <p class="toggle-link-login">Already have an account? Login</p>
         </div>
          </div>
 </section>
-    <script src="/js-folder/login.js"></script>
+    <script type="module" src="/js-folder/login.js"></script>
     <footer>
         <div class="footer-container">
             <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
@@ -90,3 +107,5 @@
     </footer>
 </body>
 </html>
+
+

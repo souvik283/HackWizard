@@ -63,3 +63,55 @@ function showLogin() {
     document.getElementById("login-container").style.display = "block";
 }
 btnSignup.addEventListener("click", validateSignUp);
+
+//Argha's Code
+
+document.addEventListener('DOMContentLoaded', () => {
+  const signUpButton = document.querySelector('.btn-signup');
+
+  signUpButton.addEventListener('click', async (event) => {
+    event.preventDefault(); // Prevent page reload
+
+    // Collect user data from input fields
+    const userData = {
+      name: document.getElementById('name')?.value || '',
+      email: document.getElementById('email')?.value || '',
+      mobile: document.getElementById('mobile')?.value || '',
+      location: document.getElementById('location')?.value || '',
+      pincode: document.getElementById('pincode')?.value || '',
+      password: document.getElementById('signup-password')?.value || ''
+    };
+
+    // Simple validation
+    if (!userData.name || !userData.email || !userData.mobile || !userData.location || !userData.pincode || !userData.password) {
+      alert('All fields are required!');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:8080/ragister', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData) // Convert to JSON
+      });
+
+      // Check if the response has content
+      const result = response.headers.get("content-length") !== "0" ? await response.json() : null;
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+
+      console.log('Signup Successful:', result);
+      alert('Signup successful!');
+
+    } catch (error) {
+      console.error('Error:', error.message);
+      alert('Signup failed. Try again.');
+    }
+  });
+});
+
+
