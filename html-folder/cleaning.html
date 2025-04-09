@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recycling Request Form</title>
+    <title>Cleaning Request Form</title>
     <link rel="stylesheet" href="/css-folder/cleaning.css">
     <link rel="stylesheet" href="/css-folder/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -44,22 +44,24 @@
         </div>
         <div class="Imagego">
             <label for="image-upload">Upload Image:</label>
-            <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
+            <input type="file" id="fileInput" name="image-upload" accept="image/*" onchange="previewImage(event)">
         </div>
+        <label for="name">Please enter your name:</label>
+                <textarea id="name" name="name"></textarea>  
 
         <label for="description">Description:</label>
-                <textarea id="description" name="description"></textarea>
+                <textarea id="comment" name="description"></textarea>
                     
-                <label for="location">Your Location:</label>
+                <label for="location">Waste Location:</label>
                 <input type="text" id="location" name="location" placeholder=" " readonly>
    
    <div class="Button-container">
                 <div class="location">
-                <button type="button" id="get-location">Get My Location</button>
+                <button type="button" id="get-location">Get Waste Location</button>
               <br>
     </div>
     <div class="submit"> 
-                <button type="submit">Submit Request</button>
+                <button class="submit-btn" type="submit">Submit Request</button>
                 </div>
    </div>
             </form>
@@ -79,9 +81,10 @@
         </div>
     </section>
 
-    
-
     <script src="/js-folder/cleaning.js"></script>
+
+
    <script src="/js-folder/nav.js"></script>
+
 </body>
 </html>

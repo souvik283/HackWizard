@@ -52,7 +52,7 @@
                 </select>
 
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+                <textarea id="comment" name="description" rows="4" required></textarea>
 
                 <label for="location">Your Location:</label>
                 <input type="text" id="location" name="location" >
@@ -62,7 +62,7 @@
                
     <br>
       <div>
-      <button type="submit">Submit Request</button>
+      <button class="submit-btn"  type="submit">Submit Request</button>
       </div>
 
 </div>
@@ -73,7 +73,7 @@
                 <div class="mypoint"><img id="preview" src="" alt="Image Preview" style="display: none;">
                 </div>
                 <label for="image-upload"></label>
-                <input type="file" id="image-upload" name="image-upload" accept="image/*" onchange="previewImage(event)">
+                <input type="file" id="fileInput" name="image-upload" accept="image/*" onchange="previewImage(event)">
             </div>
         </div>
     </div>
@@ -92,8 +92,8 @@
     </section>
 
     
-
-    <script>
+ <script src="/js-folder/nav.js"></script>
+    <!-- <script>
         function previewImage(event) {
             const preview = document.getElementById('preview');
             const file = event.target.files[0];
@@ -122,7 +122,7 @@
                 alert('Geolocation is not supported by this browser.');
             }
         });
-    </script>
-   <script src="/js-folder/nav.js"></script>
+    </script> -->
+   
 </body>
 </html>
