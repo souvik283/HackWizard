@@ -47,6 +47,11 @@ label {
     display: block;
     margin: 10px 0 5px;
 }
+option{
+    background-color: #4CAF50 ;
+    color: white;
+    padding: 10px;
+}
 
 input[type="text"],
 input[type="email"],
@@ -82,14 +87,14 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-left: 50px;
 }
 
 .image-preview img {
-    max-width: auto;
+    max-width: 180px;
     max-height: 250px;
     border-radius: 5px;
     margin-top: 10px;
+    margin-left:10px;
 }
 .image-preview {
     border: 2px dashed #ffde3b; 
