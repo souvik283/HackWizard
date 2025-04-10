@@ -36,8 +36,8 @@
     width: 230px;
 }
 .request-btn:hover,.contact-btn:hover{
-    border: 1px solid #ffde3b;
-    background-color: #ffde3b;
+    border: 1px solid rgba(98, 173, 15, 0.7);
+    background-color: rgba(98, 173, 15, 0.7);
     transition: 1s;
 }
 .services{
@@ -120,7 +120,7 @@ p{
     transition:0.5s;
 }
 .layer:hover{
-    background: rgba(255, 213, 3, 0.7);
+    background: rgba(98, 173, 15, 0.7);
 }
 .layer h3{
     width:100%;
