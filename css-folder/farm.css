@@ -84,14 +84,14 @@ textarea {
 }
 
 button {
-  background-color: #4caf50; /* Green button */
-  color: rgb(234, 234, 234);
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-right: 10px;
+    background-color: #4CAF50; /* Green button */
+    color: rgb(234, 234, 234);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
 }
 
 button:hover {

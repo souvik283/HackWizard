@@ -49,8 +49,8 @@ nav a{
 .nav-link ul li::after {
     content:'';
     width:0%;
-    height:2px;
-    background-color: #ffe357;
+    height:3px;
+    background-color: #62ad37;
     display:block;
     margin:auto;
     transition: 0.5s;
@@ -121,7 +121,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #deba05;
+    background-color: #518f2e;
     color: #fff;
     padding: 10px;
     flex-direction: row;
