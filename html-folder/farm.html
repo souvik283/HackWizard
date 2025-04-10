@@ -52,14 +52,14 @@
                 <input type="number" id="waste-weight" name="waste-weight" required>
 
                 <label for="description">Description of Waste:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+                <textarea id="comment" name="description" rows="4" required></textarea>
 
-                <label for="location">Your Location:</label>
+                <label for="location">Farm Location:</label>
                 <input type="text" id="location" name="location" placeholder="Fetching location..." readonly>
 
                 <button type="button" id="get-location">Get My Location</button>
 
-                <button type="submit">Submit Request</button>
+                <button type="submit" class = "btn btn-submit">Submit Request</button>
             </form>
            
         </div>
@@ -76,35 +76,8 @@
         </div>
     </section>
 
-    <script>
-        function previewImage(event) {
-            const preview = document.getElementById('preview');
-            const file = event.target.files[0];
-            const reader = new FileReader();
+      <script src="/js-folder/farm.js"></script>
 
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            }
-
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        }
-        document.getElementById('get-location').addEventListener('click', function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    document.getElementById('location').value = `Lat: ${latitude}, Lon: ${longitude}`;
-                }, function() {
-                    alert('Unable to retrieve your location. Please allow location access.');
-                });
-            } else {
-                alert('Geolocation is not supported by this browser.');
-            }
-        });
-    </script>
   <script src="/js-folder/nav.js"></script>
 </body>
 </html>
