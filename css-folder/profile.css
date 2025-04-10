@@ -107,7 +107,7 @@ body {
 }
 
 .btn:hover {
-    background-color: var(--accent-green);
+    background-color:#e3c013;
 }
 
 .contribution-section {
