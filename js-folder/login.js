@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Collect user data from input fields
     const userData = {
-      name: document.getElementById('name')?.value || '',
-      email: document.getElementById('email')?.value || '',
-      mobile: document.getElementById('mobile')?.value || '',
-      location: document.getElementById('location')?.value || '',
+      name: document.getElementById('signup-fullname')?.value || '',
+      email: document.getElementById('signup-email')?.value || '',
+      mobile: document.getElementById('signup-mobile')?.value || '',
+      location: document.getElementById('signup-address')?.value || '',
       pincode: document.getElementById('pincode')?.value || '',
       password: document.getElementById('signup-password')?.value || ''
     };
