@@ -67,7 +67,8 @@ nav a{
 
 
 #footer-section {
-    background-image: url(/images/footer1.jpg);
+    /* background-image: url(/images/footer1.jpg); */
+      background: linear-gradient(135deg, #9df869, #00f2fe);
     background-size: cover;
     margin-top: 5px;
     padding-top: 70px;
@@ -133,6 +134,9 @@ nav a{
     font-weight: bold;
 }
 
+#footer-section .fa-brands{
+    margin: 0 3px;
+}
 #footer-section .fa-facebook:hover {
     color: rgb(49, 145, 242);
 }
@@ -141,8 +145,8 @@ nav a{
     color: #ed294d;
 }
 
-#footer-section .fa-whatsapp:hover {
-    color: #54f561;
+#footer-section .fa-linkedin:hover {
+    color: #2395f2;
 }
 
 #footer-section .fa-x-twitter:hover {

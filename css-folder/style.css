@@ -45,7 +45,7 @@
     margin: auto;
     text-align:center;
     padding-top: 100px;
-    
+    justify-items: center;
 }
 h1{
     font-size: 36px;
@@ -59,16 +59,7 @@ h1{
     margin: auto;
     text-align:center;
 }
-h1 {
-    font-size: 36px;
-    font-weight:600px;
-}
-.row{
-    margin:5%;
-    display:flex;
-    justify-content: space-between;
 
-}
 .service-col{
     flex-basis:31%;
     background:#fff3f3;
@@ -154,4 +145,36 @@ p{
     color:#fff;
     margin-bottom:20px;
     padding:0;
+}
+
+@media(max-width:499px){
+    .services{
+        padding: 30px;
+    }
+    .services h1{
+        font-size: 25px;
+        margin: 25px 0;
+    }
+    .row {
+    width: 87%;
+}
+h1 {
+    font-size: 27px;
+    margin-bottom: 30px;
+    font-weight: 600px;
+}
+.cta {
+    margin: 40px auto;
+    width: 87%;
+}
+.cta h1 {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 28px;
+}
+.contact-btn {
+    padding: 12px 34px;
+    margin-top: 15px;
+    margin-left: 0;
+}
 }
