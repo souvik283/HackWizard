@@ -65,6 +65,121 @@ nav a{
     font-size: 25px;
 }
 
+
+#footer-section {
+    background-image: url(/images/footer1.jpg);
+    background-size: cover;
+    margin-top: 5px;
+    padding-top: 70px;
+    padding-bottom: 5px;
+}
+
+#footer-section #column1 img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+#footer-section #column2,
+#footer-section #column3,
+#footer-section #column4 {
+    margin-top: 59px;
+}
+
+#footer-section .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 20px;
+}
+
+#footer-section .footer-last {
+    text-align: center;
+}
+
+#footer-section .footer-last p {
+    color: #393939;
+    margin-bottom: 5px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+#footer-section .footer-content a {
+    text-decoration: none;
+}
+
+#footer-section .col h3 {
+    color: #141414;
+    text-align: start;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#footer-section .col p,
+#footer-section .col a {
+    color: #393939;
+    font-size: 22px;
+    font-weight: 540;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#footer-section .col a:hover {
+    color: #086a2f;
+}
+
+#footer-section .col p span {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+#footer-section .fa-facebook:hover {
+    color: rgb(49, 145, 242);
+}
+
+#footer-section .fa-instagram:hover {
+    color: #ed294d;
+}
+
+#footer-section .fa-whatsapp:hover {
+    color: #54f561;
+}
+
+#footer-section .fa-x-twitter:hover {
+    color: #0b0b0b;
+}
+
+@media(max-width: 499px){
+        #footer-section {
+        justify-content: space-between;
+    }
+
+    #footer-section #column2,
+    #footer-section #column3,
+    #footer-section #column4 {
+        margin-top: 0;
+    }
+
+    #footer-section .col h3 {
+        font-size: 21px;
+    }
+
+    #footer-section .col p,
+    #footer-section .col a {
+        font-size: 18px;
+    }
+
+    #footer-section .footer-last p {
+        font-size: 14px;
+    }
+
+    #footer-section .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
 @media(max-width:750px){
     .text-box h1{
         font-size: 20px;
@@ -73,16 +188,20 @@ nav a{
         display:block;
     }
     .nav-link{
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
         background:transparent;
-        border: #000000 1.5px solid;
         backdrop-filter:blur(20px) brightness(110%);
         height:100vh;
         width:200px;
-        right:-200px;
+        right: -200px;
         top:0;
         text-align:left;
+        border: none;
         z-index:2;
+        transition: 0.4s;
     }
     .row{
         flex-direction: column;
@@ -123,7 +242,6 @@ nav a{
     align-items: center;
     background-color: #518f2e;
     color: #fff;
-    padding: 10px;
     flex-direction: row;
     height:50px;
     bottom: 0;
