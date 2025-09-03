@@ -68,7 +68,8 @@ nav a{
 
 #footer-section {
     /* background-image: url(/images/footer1.jpg); */
-      background: linear-gradient(135deg, #9df869, #00f2fe);
+      /* background: linear-gradient(135deg, #9df869, #2deaf4); */
+    background-image: url("/images/footer_back.jpg");
     background-size: cover;
     margin-top: 5px;
     padding-top: 70px;
