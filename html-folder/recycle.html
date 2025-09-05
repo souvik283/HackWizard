@@ -40,7 +40,16 @@
         <h1>Recycling Request Form</h1>
         <div class="form-container">
             <form id="recycling-form">
-               
+                <div class="image-preview">
+                <h2>Image Preview</h2>
+                <div class="mypoint"><img id="preview" src="" alt="Image Preview" style="display: none;">
+                </div>
+                <label for="image-upload"></label>
+                <input type="file" id="fileInput" name="image-upload" accept="image/*" onchange="previewImage(event)">
+            </div>
+        </div>
+
+         
                 <label for="waste-type">Type of Waste:</label>
                 <select id="waste-type" name="waste-type" required>
                     <option value="" disabled selected>Select waste type</option>
@@ -65,15 +74,7 @@
 
 </div>    
             </form>
-            <div class="image-preview">
-                <h2>Image Preview</h2>
-                <div class="mypoint"><img id="preview" src="" alt="Image Preview" style="display: none;">
-                </div>
-                <label for="image-upload"></label>
-                <input type="file" id="fileInput" name="image-upload" accept="image/*" onchange="previewImage(event)">
-            </div>
-        </div>
-    </div>
+    </section>
     <section class="footer">
         <div class="footer-container">
             <p>&copy; 2025 Smart India Clean India. All rights reserved.</p>
@@ -84,7 +85,6 @@
             <div> <a href="www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a></div>
         </div>
         </div>
-    </section>
 
  <script src="/js-folder/recycle.js"></script>
  <script src="/js-folder/nav.js"></script>
