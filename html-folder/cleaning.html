@@ -47,16 +47,20 @@
             <img id="preview" src="" alt="Image Preview" style="display: none;">
         </div> -->
 
+        <div class="image-preview" id="image-container">
+            <h2>Image Preview</h2>
             <div id="image-container"></div>
+        </div>
             <div class="Imagego">
-            <input type="file" id="imageUpload" accept="image/*" onchange="loadImage(event)">
+            <label for="image-upload">Upload Image:</label>
+            <input type="file" id="imageUpload" accept="image/*"  onchange="loadImage(event)">
             </div>
             <!-- <div class="Imagego">
             <label for="image-upload">Upload Image:</label> -->
             <!-- <input type="file" id="imageUpload"  name="image-upload" accept="image/*" onchange="previewImage(event)" onchange="loadImage(event)" > -->
             <!-- </div> -->
-            <div id="image-container"></div>
-            <div id="label-container"></div>
+            
+            
             <label for="name">Please enter your name:</label>
             <textarea id="name" name="name"></textarea>
 
@@ -66,13 +70,15 @@
             <label for="location">Waste Location:</label>
             <input type="text" id="location" name="location" placeholder=" " readonly>
 
+            <p id="description"></p>
+
             <div class="Button-container">
                 <div class="location">
                     <button type="button" id="get-location">Get Waste Location</button>
                     <br>
                 </div>
                 <div class="submit">
-                    <button class="submit-btn" type="submit">Submit Request</button>
+                    <button id="submit-btn" onclick="print1()" class="submit-btn" type="submit">Submit Request</button>
                 </div>
             </div>
             </form>
@@ -98,59 +104,9 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-        <script type="text/javascript">
-            const URL = "https://teachablemachine.withgoogle.com/models/xugPJMxVd/";
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
-            let model, labelContainer, maxPredictions, imageElement;
-
-            // Load model on page load
-            async function init() {
-                const modelURL = URL + "model.json";
-                const metadataURL = URL + "metadata.json";
-
-                // load the model and metadata
-                model = await tmImage.load(modelURL, metadataURL);
-                maxPredictions = model.getTotalClasses();
-
-                labelContainer = document.getElementById("label-container");
-                for (let i = 0; i < maxPredictions; i++) {
-                    labelContainer.appendChild(document.createElement("div"));
-                }
-            }
-
-            // Function to load image from input
-            function loadImage(event) {
-                const reader = new FileReader();
-                reader.onload = function () {
-                    const imgContainer = document.getElementById("image-container");
-                    imgContainer.innerHTML = ""; // clear previous image
-                    imageElement = document.createElement("img");
-                    imageElement.src = reader.result;
-                    imageElement.width = 200;
-                    imageElement.height = 200;
-                    imgContainer.appendChild(imageElement);
-
-                    // Run prediction after image is loaded
-                    imageElement.onload = predict;
-                };
-                reader.readAsDataURL(event.target.files[0]);
-            }
-
-            // Run prediction
-            async function predict() {
-                const prediction = await model.predict(imageElement);
-                for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction =
-                        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                    labelContainer.childNodes[i].innerHTML = classPrediction;
-                }
-            }
-
-            // Initialize model when page loads
-            window.onload = init;
-        </script>
+        <script src="/js-folder/cleaning2.js" type="text/javascript"></script>
 
         <script src="/js-folder/cleaning.js"></script>
 
