@@ -126,34 +126,7 @@ body {
   color: #c9c9c9;
 }
 
-.image-section {
-  height: 290px;
-  overflow: hidden;
-  position: relative;
-}
 
-.banner-image {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
-
-.photo-credit {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: white;
-  font-size: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.benefits-section {
-  background-color: white;
-  padding: 50px 20px;
-  text-align: center;
-}
 
 .benefits-title {
   font-size: 24px;
@@ -188,7 +161,7 @@ body {
   width: 80%;
   margin: auto;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 40px;
 
 }
 
@@ -246,12 +219,14 @@ h1 {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  margin-top: 50px;
 }
 
 #video h2 {
   font-size: xx-large;
   font-weight: 700;
+  color: #262626;
 }
 
 #video .container {
@@ -265,4 +240,16 @@ h1 {
   width: 17vw;
   border-radius: 10px;
   margin: 25px 0;
+}
+
+@media(max-width:499px) {
+  #video .container {
+    width: 87vw;
+  }
+
+  #video .container video {
+    width: 25vw;
+    border-radius: 6px;
+    margin: 3px 0;
+  }
 }
