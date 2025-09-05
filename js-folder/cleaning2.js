@@ -48,23 +48,29 @@ async function predict() {
     // }
 
     if (((prediction[0].probability.toFixed(2)) * 100) > 90) {
-        // descrip_txt.innerHTML="It is clearly waste"
+        descrip_txt.innerHTML = ""
         submit_button.disabled = false;
         submit_button.style.cursor = "pointer"
+        // submit_button.style.backgroundColor = "#62ad37ff"
+        submit_button.addEventListener("mouseover", ()=>{
+            submit_button.style.backgroundColor= "#e4c114ff"
+        })
+        submit_button.addEventListener("mouseout", ()=>{
+            submit_button.style.backgroundColor= "#62ad37ff"
+        })
     }
     else if (((prediction[0].probability.toFixed(2)) * 100) >= 75 && ((prediction[0].probability.toFixed(2)) * 100) <= 90) {
         descrip_txt.innerHTML = "** Image is not clear, Please take a clear image **"
         submit_button.disabled = true;
         submit_button.style.cursor = "not-allowed"
+        submit_button.style.backgroundcolor = "#d8d8d8ff"
     } else if (((prediction[0].probability.toFixed(2)) * 100) < 75) {
         descrip_txt.innerHTML = "** It is clearly not a waste **"
         submit_button.disabled = true;
         submit_button.style.cursor = "not-allowed"
+        submit_button.style.backgroundColor = "#dbdbdbff"
     }
 
-}
-let print1 = () => {
-    console.log("hiii")
 }
 
 // Initialize model when page loads
