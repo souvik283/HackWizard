@@ -51,7 +51,7 @@ async function predict() {
         descrip_txt.innerHTML = ""
         submit_button.disabled = false;
         submit_button.style.cursor = "pointer"
-        // submit_button.style.backgroundColor = "#62ad37ff"
+        submit_button.style.backgroundColor = "#62ad37ff"
         submit_button.addEventListener("mouseover", ()=>{
             submit_button.style.backgroundColor= "#e4c114ff"
         })
