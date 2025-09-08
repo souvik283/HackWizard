@@ -1,12 +1,12 @@
-const URL = "https://teachablemachine.withgoogle.com/models/xugPJMxVd/";
+const Model_URL = "https://teachablemachine.withgoogle.com/models/xugPJMxVd/";
 
 let model, labelContainer, maxPredictions, imageElement;
 let submit_button = document.getElementById("submit-btn")
 
 // Load model on page load
 async function init() {
-    const modelURL = URL + "model.json";
-    const metadataURL = URL + "metadata.json";
+    const modelURL = Model_URL + "model.json";
+    const metadataURL = Model_URL + "metadata.json";
 
     // load the model and metadata
     model = await tmImage.load(modelURL, metadataURL);

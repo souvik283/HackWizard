@@ -1,10 +1,11 @@
+// import { createClient } from '@supabase/supabase-js'
 
 // 🔹 Replace with YOUR values from Supabase Project Settings → API
 const SUPABASE_URL = "https://qitewsgbwhvayhhlcqud.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpdGV3c2did2h2YXloaGxjcXVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNTM2NTIsImV4cCI6MjA3MjYyOTY1Mn0.zeBbI8MENQTrkxzwG4GKXvHQ8SOUt4qBDxsSCw7iBEU";
 
 
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
 
@@ -25,26 +26,27 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
     console.log(description)
     console.log(location)
 
- // Upload to storage bucket "photo"
-// const filePath = `reports/${Date.now()}-${image_file.name}`;
+//  Upload to storage bucket "photo"
 
-// const { data, error } = await supabaseClient.storage
-//   .from("photo")
-//   .upload(filePath, image_file);
+const filePath = `reports/${Date.now()}-${image_file.name}`;
 
-// if (error) {
-//   alert("❌ Upload failed!");
-//   console.error(error);
-//   return;
-// }
+const { data, error } = await supabaseClient.storage
+  .from("photo")
+  .upload(filePath, image_file);
+
+if (error) {
+  alert("❌ Upload failed!");
+  console.error(error);
+  return;
+}
 
 // Get public URL for preview / save to table
-// const { data: urlData } = supabaseClient.storage
-//   .from("photo")
-//   .getPublicUrl(filePath);
+const { data: urlData } = supabaseClient.storage
+  .from("photo")
+  .getPublicUrl(filePath);
 
-// console.log("✅ Uploaded! Public URL:", urlData.publicUrl);
-// alert("✅ Success! Image uploaded.");
+console.log("✅ Uploaded! Public URL:", urlData.publicUrl);
+alert("✅ Success! Image uploaded.");
 
 
     // Save into table "test"
@@ -54,7 +56,8 @@ const { error: insertError} = await supabaseClient
   .insert([
     {
       des: description,
-      loc: location
+      loc: location,
+      img_url: urlData.publicUrl
     }
   ]);
 
