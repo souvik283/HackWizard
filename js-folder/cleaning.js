@@ -48,7 +48,7 @@ document.getElementById('get-location').addEventListener('click', function() {
         navigator.geolocation.getCurrentPosition(function(position) {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-            document.getElementById('location').value = `Lat: ${latitude}, Lon: ${longitude}`;
+            document.getElementById('location').value = `${latitude}, ${longitude}`;
         }, function() {
             alert('Unable to retrieve your location. Please allow location access.');
         });
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Check if an image was selected
       if (!selectedImage) {
-        alert("Please select an image first");
+        console.log("Please select an image first");
         return;
       }
       
