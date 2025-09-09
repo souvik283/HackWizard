@@ -73,6 +73,7 @@ button {
     margin-top: 20px;
     margin-right: 10px;
 }
+
 button:hover {
     background-color: #e3c013;
 }
@@ -125,7 +126,9 @@ image-preview {
 }
 
 @media(max-width:750px) {
-
+h1{
+    margin-bottom: 10px;
+}
     .container {
         display: flex;
         flex-direction: column;
@@ -138,20 +141,18 @@ image-preview {
 
     .image-preview {
         border: 2px dashed #ffde3b;
-        padding: 5px;
         background-color: transparent;
         border-radius: 5px;
         text-align: center;
-        margin-top: 32px;
-        margin-left: 30px;
+        align-self: center;
         height: auto;
-        width: 200px;
-        margin-left: 50px;
+        width: 68vw;
+        margin: 0;
 
     }
 
     .image-preview img {
-        max-width: 100px;
-        max-height: 100px;
+        width: 85%;
+        height: auto;
     }
 }

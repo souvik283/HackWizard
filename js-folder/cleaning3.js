@@ -11,66 +11,70 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_
 
 // Upload handler
 document.getElementById("submit-btn").addEventListener("click", async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
 
-    let x = document.getElementsByClassName("input3")
+  let x = document.getElementsByClassName("input3")
 
-    const image = document.getElementById("imageUpload")
-    const image_file = image.files[0];
-    const name = x[1].value;
-    const description = x[2].value;
-    const location = x[3].value;
-    const date = `${new Date().getDate().toLocaleString()}/${new Date().getMonth().toLocaleString()}/${new Date().getFullYear().toLocaleString()}`
-    // console.log(image_file)
-    // console.log(name)
-    // console.log(description)
-    // console.log(location)
-    console.log(date)
+  const image = document.getElementById("imageUpload")
+  const image_file = image.files[0];
+  const name = x[1].value;
+  const description = x[2].value;
+  const location = x[3].value;
+  const date = `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`
+  // console.log(image_file)
+  // console.log(name)
+  // console.log(description)
+  // console.log(location)
+  console.log(date)
 
-//  Upload to storage bucket "photo"
+  //  Upload to storage bucket "photo"
 
-const filePath = `reports/${Date.now()}-${image_file.name}`;
+  const filePath = `reports/${Date.now()}-${image_file.name}`;
 
-const { data, error } = await supabaseClient.storage
-  .from("photo")
-  .upload(filePath, image_file);
+  const { data, error } = await supabaseClient.storage
+    .from("photo")
+    .upload(filePath, image_file);
 
-if (error) {
-  alert("❌ Upload failed!");
-  console.error(error);
-  return;
-}
+  if (error) {
+    alert("❌ Upload failed!");
+    console.error(error);
+    return;
+  }
 
-// Get public URL for preview / save to table
-const { data: urlData } = supabaseClient.storage
-  .from("photo")
-  .getPublicUrl(filePath);
+  // Get public URL for preview / save to table
+  const { data: urlData } = supabaseClient.storage
+    .from("photo")
+    .getPublicUrl(filePath);
 
-console.log("✅ Uploaded! Public URL:", urlData.publicUrl);
-alert("✅ Success! Image uploaded.");
-
-
-    // Save into table "test"
-
-const { error: insertError} = await supabaseClient
-  .from("Argha")
-  .insert([
-    {
-      des: description,
-      loc: location,
-      img_url: urlData.publicUrl,
-      date: date
-    }
-  ]);
+  console.log("✅ Uploaded! Public URL:", urlData.publicUrl);
+  alert("✅ Success! Image uploaded.");
 
 
-    if (insertError) {
-        alert(" Failed to save record!");
-        console.error(insertError);
-    } else {
-        alert(" Success! Saved to Supabase.");
-    }
+  // Save into table "test"
+
+  const { error: insertError } = await supabaseClient
+    .from("Argha")
+    .insert([
+      {
+        des: description,
+        loc: location,
+        img_url: urlData.publicUrl,
+        date: date
+      }
+    ]);
+
+
+  if (insertError) {
+    alert(" Failed to save record!");
+    console.error(insertError);
+  } else {
+    alert(" Success! Saved to Supabase.");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  }
+
 });
 
 
