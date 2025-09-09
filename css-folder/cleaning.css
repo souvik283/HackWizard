@@ -87,24 +87,27 @@ image-preview {
     align-items: center;
     justify-content: center;
     border: 2px dashed #ffde3b;
-    padding: 5px;
+    justify-self: center;
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
     margin-top: 32px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    min-height: 40px;
+    width: 350px;
     height: auto;
-    width: 400px;
     box-shadow: 0 0 5px #ffde3b;
     flex-direction: column;
-    margin-left: 280px;
+    /* margin-left: 280px; */
 }
 
 .image-preview img {
     width: 300px;
-    max-width: 200px;
-    max-height: 250px;
+    /* max-width: 200px; */
+    /* max-height: 250px; */
     border-radius: 5px;
+    height: auto;
+    margin: 5px 0;
 
 }
 

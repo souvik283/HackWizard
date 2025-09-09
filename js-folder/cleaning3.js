@@ -21,10 +21,12 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
     const name = x[1].value;
     const description = x[2].value;
     const location = x[3].value;
-    console.log(image_file)
-    console.log(name)
-    console.log(description)
-    console.log(location)
+    const date = `${new Date().getDate().toLocaleString()}/${new Date().getMonth().toLocaleString()}/${new Date().getFullYear().toLocaleString()}`
+    // console.log(image_file)
+    // console.log(name)
+    // console.log(description)
+    // console.log(location)
+    console.log(date)
 
 //  Upload to storage bucket "photo"
 
@@ -57,7 +59,8 @@ const { error: insertError} = await supabaseClient
     {
       des: description,
       loc: location,
-      img_url: urlData.publicUrl
+      img_url: urlData.publicUrl,
+      date: date
     }
   ]);
 
