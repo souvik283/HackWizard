@@ -1,7 +1,7 @@
 .header {
     background-image: linear-gradient(rgba(4, 9, 30, 0.5),
             rgba(4, 9, 30, 0.7)), url(/images/Untitled\ design\ \(2\).png);
-    min-height: 120vh;
+    height: 980px;
 }
 
 body {
@@ -60,12 +60,13 @@ input[type="email"],
 select,
 textarea {
     background-color: transparent;
-    width: 100%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 4px;
     color: white;
+    font-size: 18px;
     box-shadow: 0 0 5px #ffffff;
 }
 
@@ -92,35 +93,32 @@ button:hover {
     text-align: center;
 }
 
-.image-preview img {
-    max-width: 180px;
-    max-height: 250px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
 
 .image-preview {
     border: 2px dashed #ffde3b;
-    padding: 7px;
+    padding: 5px 10px;
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    margin-top: 32px;
-    margin-left: 30px;
+    margin: 10px 0;
     height: auto;
-    width: 200px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-self: center;
     position: relative;
     box-shadow: 0 0 5px #ffde3b;
 }
 
-
-.image-preview img {
+h2{
+    display: flex;
+    align-self: center;
+}
+ img {
+    width: 300px;
     height: auto;
-    width: auto;
+    align-self: center;
     border-radius: 5px;
 }
 
