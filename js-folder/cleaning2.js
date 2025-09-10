@@ -1,5 +1,5 @@
-const Model_URL = "https://teachablemachine.withgoogle.com/models/xugPJMxVd/";
-
+// const Model_URL = "https://teachablemachine.withgoogle.com/models/xugPJMxVd/";
+const Model_URL = "https://teachablemachine.withgoogle.com/models/18M41aqGw/";
 let model, labelContainer, maxPredictions, imageElement;
 let submit_button = document.getElementById("submit-btn")
 
