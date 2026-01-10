@@ -30,8 +30,8 @@ We are a team of passionate innovators dedicated to building sustainable solutio
 | *Name*         | *Role*              |
 |------------------|-----------------------|
 | Rajib     | FrontEnd Developer|
-| Argha     | Backend Developer|
+| Argha     | App Developer|
 | Imran     | FullStack Developer|
-| Souvik     | Frontend Developer|
+| Souvik     | FullStack Developer|
 | Aritra     | Pitcher|
 | Asmita     | Designer |
