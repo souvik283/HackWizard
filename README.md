@@ -23,7 +23,7 @@ Our goal is to promote sustainability by reducing inefficiencies in waste collec
 - *Database:* MYSQL, MongoDB
 - *Version Control:* Git & GitHub
 
-## 👥 *HackWizards*
+## 👥 *HackStars*
 
 We are a team of passionate innovators dedicated to building sustainable solutions.
 
