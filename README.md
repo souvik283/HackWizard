@@ -1,4 +1,5 @@
 ## [*HackStars - Waste Management System (User Page)*](https://hackwizards.netlify.app/)
+## [*HackStars - Waste Management System (App)*](https://hackwizards.netlify.app/public/app-debug.apk)
 ## [*HackStars - waste Management System (Organizer Page)*](https://hackwizards2govt.netlify.app/)
 
 A smart waste management solution designed to bridge the gap between users and government authorities, making waste collection efficient, transparent, and eco-friendly. This project is part of our submission for the *Smart India Hackathon*.
